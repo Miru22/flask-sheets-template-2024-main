@@ -91,10 +91,11 @@
             UNIQUE_ID IS USED FOR SETTING THE ACTIVE PAGE (SHOULD MATCH THE ACTIVE PAGE VALUE SET IN THE CHILD PAGE)
             TITLE IS DISPLAYED AS THE LINK TEXT
     -->
-    {% set public_nav = [ ('/about', 'about', 'About'), ('/products',
-    'products', 'Products'), ('/login', 'login', 'Login'), ] -%} {% set
-    protected_nav = [ ('/about', 'about', 'About'), ('/products', 'products',
-    'Products'), ('/user/orders', 'user_orders', 'Orders'), ] -%}
+    {% set public_nav = [('/upload', 'upload', 'Upload'), ('/about', 'about',
+    'About'), ('/products','products', 'Products'), ('/login', 'login',
+    'Login'), ] -%} {% set protected_nav = [ ('/about', 'about', 'About'),
+    ('/products', 'products', 'Products'), ('/user/orders', 'user_orders',
+    'Orders'), ] -%}
 
     <!--
         ACTIVE PAGE (ALLOWS CHILD PAGES TO DESIGNATE THEY ARE THE ACTIVE PAGE)
