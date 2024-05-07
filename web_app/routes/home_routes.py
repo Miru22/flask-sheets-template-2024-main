@@ -11,3 +11,7 @@ def index():
 @home_routes.route("/about")
 def about():
     return render_template("about.html")
+
+@home_routes.route("/upload")
+def upload():
+    return render_template("upload.html")
