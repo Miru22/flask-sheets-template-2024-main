@@ -92,10 +92,9 @@
             TITLE IS DISPLAYED AS THE LINK TEXT
     -->
     {% set public_nav = [('/upload', 'upload', 'Upload'), ('/about', 'about',
-    'About'), ('/products','products', 'Products'), ('/login', 'login',
-    'Login'), ] -%} {% set protected_nav = [ ('/about', 'about', 'About'),
-    ('/products', 'products', 'Products'), ('/user/orders', 'user_orders',
-    'Orders'), ] -%}
+    'About'), ('/data','data', 'Data'), ('/login', 'login', 'Login'), ] -%} {%
+    set protected_nav = [ ('/about', 'about', 'About'), ('/data', 'data',
+    'Data'), ('/user/orders', 'user_orders', 'Orders'), ] -%}
 
     <!--
         ACTIVE PAGE (ALLOWS CHILD PAGES TO DESIGNATE THEY ARE THE ACTIVE PAGE)
