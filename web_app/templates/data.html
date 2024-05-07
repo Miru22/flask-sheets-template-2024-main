@@ -1,63 +1,11 @@
-{% extends "bootstrap_5_layout.html" %} {% set page_title = "Data Page" %} {%
-set active_page = "data" %} {% block content %}
+{% endif %} {% endblock %} {% extends "bootstrap_5_layout.html" %} {% set
+page_title = "Data Page" %} {% set active_page = "data" %} {% block content %}
 
-<h1>Statistics</h1>
+<h1>Data</h1>
 
 <p class="lead">
   This page will eventually display statistics using the Google Sheets as a data
   source.
 </p>
 
-{% if products|length > 0 %}
-
-<!--div class="container"-->
-<div class="row">
-  {% for product in products %}
-  <div class="col">
-    <div class="card" style="width: 18rem; margin-bottom: 20px">
-      <img
-        class="card-img-top"
-        src="{{ product.url }}"
-        alt="an image of '{{ product.name }}'"
-      />
-      <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <p class="card-text">{{ product.description }}</p>
-
-        <!--button class="btn btn-primary">Order now!</button-->
-
-        <!-- CREATE ORDER -->
-        <form
-          method="POST"
-          action="/user/orders/create"
-          style="display: inline"
-        >
-          <input type="hidden" name="product_id" value="{{ product.id }}" />
-          <input type="hidden" name="product_name" value="{{ product.name }}" />
-          <input
-            type="hidden"
-            name="product_description"
-            value="{{ product.description }}"
-          />
-          <input
-            type="hidden"
-            name="product_price"
-            value="{{ product.price }}"
-          />
-          <input type="hidden" name="product_url" value="{{ product.url }}" />
-          <button type="submit" class="btn btn-outline-primary">
-            Order now!
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-<!--/div-->
-
-{% else %}
-
-<p>Oops, no products found.</p>
-
-{% endif %} {% endblock %}
+{% endblock %}
