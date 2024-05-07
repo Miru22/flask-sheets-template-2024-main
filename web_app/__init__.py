@@ -13,7 +13,7 @@ from app import APP_ENV, APP_VERSION
 from web_app.routes.home_routes import home_routes
 from web_app.routes.auth_routes import auth_routes
 from web_app.routes.user_routes import user_routes
-from web_app.routes.product_routes import product_routes
+from web_app.routes.data_routes import product_routes
 from web_app.routes.order_routes import order_routes
 
 load_dotenv()
